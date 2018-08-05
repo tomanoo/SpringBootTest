@@ -1,37 +1,29 @@
-package Student;
+package com.example.student;
+
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
+@DynamicUpdate
 @Entity
-@Table(name="student")
+@Table(name= "student")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Long id;
     @Column(name="name")
     private String name;
     @Column(name="passport_number")
     private String passportNumber;
-/*
-    public Student(){
-        super();
-    }
 
-    public Student(Long id, String name, String passportNumber){
-        super();
+    public Student(Long id, String name, String passportNumber) {
         this.id = id;
         this.name = name;
         this.passportNumber = passportNumber;
     }
 
-    public Student(String name, String passportNumber){
-        super();
-        this.name = name;
-        this.passportNumber = passportNumber;
-    }
-*/
     public Long getId() {
         return id;
     }
@@ -57,8 +49,12 @@ public class Student {
     }
 
     @Override
-    public String toString(){
-        return String.format("Student [id=%s, name=%s, passportNumber=%s", id, name, passportNumber);
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", passportNumber='" + passportNumber + '\'' +
+                '}';
     }
 }
 
