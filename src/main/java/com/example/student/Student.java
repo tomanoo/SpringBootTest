@@ -19,7 +19,14 @@ public class Student {
     private String passportNumber;
 
     public Student(Long id, String name, String passportNumber) {
+        super();
         this.id = id;
+        this.name = name;
+        this.passportNumber = passportNumber;
+    }
+
+    public Student(String name, String passportNumber) {
+        super();
         this.name = name;
         this.passportNumber = passportNumber;
     }
