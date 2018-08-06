@@ -18,6 +18,10 @@ public class Student {
     @Column(name="passport_number")
     private String passportNumber;
 
+    public Student() {
+        super();
+    }
+
     public Student(Long id, String name, String passportNumber) {
         super();
         this.id = id;
