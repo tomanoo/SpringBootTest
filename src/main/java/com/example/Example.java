@@ -10,17 +10,17 @@ import org.springframework.boot.autoconfigure.*;
 
 
 @SpringBootApplication
-public class Example implements CommandLineRunner{
+public class Example{// implements CommandLineRunner{
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
-    StudentRepository repository;
+   // @Autowired
+   // StudentRepository repository;
 
     public static void main(String[] args) throws Exception{
         SpringApplication.run(Example.class, args);
     }
-
+/*
     @Override
     public void run(String... args) throws Exception {
 
@@ -37,6 +37,6 @@ public class Example implements CommandLineRunner{
     //    repository.deleteById(2L);
 
         logger.info("All users 2 -> {}", repository.findAll());
-    }
+    }*/
 
 }
