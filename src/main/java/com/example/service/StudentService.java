@@ -26,6 +26,7 @@ public class StudentService {
     public List<Student> getStudentsByName(String name){
         return studentDao.findByNameIgnoreCase(name);
     }
+
     public List<Student> getStudentsByNameContaining(String name){
         return studentDao.findByNameContainingIgnoreCase(name);
     }

@@ -1,0 +1,7 @@
+
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÖÔ³øÿÿÿÿ
+@squid:S1068"*Remove this unused "logger" private field.(ù³õr
+dsquid:S4488%"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(·Ì‹«şÿÿÿÿ
+esquid:S4488 "NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ÎÔ¸–
+fsquid:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ê»‡üÿÿÿÿ
+_squid:S4488*"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Š¶Ï

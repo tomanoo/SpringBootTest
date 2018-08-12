@@ -5,11 +5,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-@DynamicUpdate
 @Entity
 @Table(name= "student")
-public class Student {
+@DynamicUpdate
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = 3509071389208277005L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,16 +26,15 @@ public class Student {
     public Student() {
         super();
     }
-
-    public Student(Long id, String name, String passportNumber) {
+    public Student(String name, String passportNumber) {
         super();
-        this.id = id;
         this.name = name;
         this.passportNumber = passportNumber;
     }
 
-    public Student(String name, String passportNumber) {
+    public Student(Long id, String name, String passportNumber) {
         super();
+        this.id = id;
         this.name = name;
         this.passportNumber = passportNumber;
     }

@@ -1,12 +1,15 @@
 package com.example;
 
 import com.example.student.Student;
-import com.example.student.StudentRepository;
+//import com.example.student.StudentRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.context.ApplicationContext;
+
+import java.util.Arrays;
 
 
 @SpringBootApplication
@@ -17,8 +20,15 @@ public class Example{// implements CommandLineRunner{
    // @Autowired
    // StudentRepository repository;
 
-    public static void main(String[] args) throws Exception{
-        SpringApplication.run(Example.class, args);
+    public static void main(String[] args){
+        ApplicationContext ctx = SpringApplication.run(Example.class, args);
+
+        System.out.println("Let's inspect the beans provided by Spring Boot!");
+
+        String[] beanNames = ctx.getBeanDefinitionNames();
+        Arrays.sort(beanNames);
+        for(String beanName : beanNames)
+            System.out.println(beanName);
     }
 /*
     @Override
