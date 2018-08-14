@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -19,8 +20,9 @@ public class StudentService {
     @Autowired
     private StudentDao studentDao;
 
-    public Student getStudentById(Long id){
-        return studentDao.findByStudentId(id);
+    public Optional<Student> getStudentById(Long id){
+     //   return studentDao.findByStudentId(id);
+        return studentDao.findById(id);
     }
 
     public List<Student> getStudentsByName(String name){

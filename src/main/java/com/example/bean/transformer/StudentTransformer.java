@@ -5,7 +5,7 @@ import com.example.student.Student;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StudentTransformer extends AbstractTransfomer<StudentBean, Student> {
+public class StudentTransformer extends AbstractTransformer<StudentBean, Student> {
 
     @Override
     public StudentBean transformToBean(Student student){

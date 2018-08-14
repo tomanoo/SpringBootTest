@@ -4,12 +4,14 @@ package com.example.web;
 import com.example.bean.StudentBean;
 import com.example.service.StudentService;
 import com.example.service.TransformerProvider;
+import com.example.student.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -26,7 +28,9 @@ public class StudentController {
 
     @RequestMapping(value = "/web/student/{id}", method = RequestMethod.GET)
     public StudentBean getStudentById(@PathVariable Long id){
-        return transformerProvider.setStudentFromModel(studentService.getStudentById(id));
+        Optional<Student> student = studentService.getStudentById(id);
+        //return transformerProvider.setStudentFromModel(studentService.getStudentById(id));
+        return student.map(s -> transformerProvider.setStudentFromModel(s)).orElse(new StudentBean());
     }
 
     @RequestMapping(value = "/web/student/{id}", method = RequestMethod.DELETE)
@@ -44,7 +48,7 @@ public class StudentController {
         return studentService.getStudentsByNameContaining(value).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
-    @RequestMapping(value = "/web/student", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/student/passport_number", method = RequestMethod.GET)
     public StudentBean getStudentByPassportNumber(@PathVariable String passportNumber){
         return transformerProvider.setStudentFromModel(studentService.getStudentByPassportNumber(passportNumber));
     }
