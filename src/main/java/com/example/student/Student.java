@@ -1,8 +1,6 @@
 package com.example.student;
 
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.io.Serializable;
