@@ -1,7 +1,11 @@
 
-dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÖÔ³øÿÿÿÿ
-@squid:S1068"*Remove this unused "logger" private field.(ù³õr
-dsquid:S4488%"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(·Ì‹«şÿÿÿÿ
-esquid:S4488 "NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ÎÔ¸–
-fsquid:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ê»‡üÿÿÿÿ
-_squid:S4488*"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Š¶Ï
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ø“³ÿÿÿÿÿ8Ğ¿ êÓ,
+hsquid:S4488="JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ñÚ£’8Ğ¿ êÓ,
+ksquid:S4488)"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ªà¹ßüÿÿÿÿ8Ğ¿ êÓ,
+ksquid:S44888"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¼°ïşÿÿÿÿ8Ğ¿ êÓ,
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÖÔ³øÿÿÿÿ
+esquid:S4488$"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ÎÔ¸–
+fsquid:S4488."HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹ÿ§°8Ğ¿ êÓ,
+@squid:S1068"*Remove this unused "logger" private field.(ù³õr
+esquid:S00112%"FDefine and throw a dedicated exception instead of using a generic one.(©¼–ö8Ğ¿ êÓ,
+ksquid:S44883"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Äî‘Çøÿÿÿÿ8Ğ¿ êÓ,
