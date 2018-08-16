@@ -49,8 +49,13 @@ public class StudentController {
     }
 
     @RequestMapping(value = "/web/student/passport_number", method = RequestMethod.GET)
-    public StudentBean getStudentByPassportNumber(@PathVariable String passportNumber){
+    public StudentBean getStudentByPassportNumber(@RequestParam(name = "passport_number") String passportNumber){
         return transformerProvider.setStudentFromModel(studentService.getStudentByPassportNumber(passportNumber));
+    }
+
+    @RequestMapping(value = "web/passport_number-containing/{value}", method = RequestMethod.GET)
+    public List<StudentBean> getStudentsByPassportNumberContaining(@PathVariable String value){
+        return studentService.getStudentsByPassportNumberContaining(value).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
     @RequestMapping(value = "/web/students", method = RequestMethod.GET)

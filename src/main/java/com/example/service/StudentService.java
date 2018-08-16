@@ -37,6 +37,10 @@ public class StudentService {
         return studentDao.findByPassportNumberIgnoreCase(passportNumber);
     }
 
+    public List<Student> getStudentsByPassportNumberContaining(String passportNumber){
+        return studentDao.findByPassportNumberContainingIgnoreCase(passportNumber);
+    }
+
     public List<Student> getAllStudents(){
         Iterable<Student> students = studentDao.findAll();
         return StreamSupport.stream(students.spliterator(), false).collect(Collectors.toList());
