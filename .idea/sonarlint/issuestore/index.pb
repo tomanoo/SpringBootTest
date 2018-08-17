@@ -13,8 +13,6 @@ e
 5src/main/java/com/example/service/StudentService.java,9\a\9a71b92fca5f8613a3c4af4a65c4bc0769d68e93
 j
 :src/main/java/com/example/service/TransformerProvider.java,b\5\b51884c90ce306020a8e94249e5ee7872017f722
-^
-.src/main/java/com/example/student/Student.java,8\6\869a8c707cd5e9aa53d561e1adb25efb9bfbd3dc
 V
 &src/main/java/com/example/Example.java,3\3\33d14dede60b5a27e3398fbe76ad0d4aa109dc6f
 Y
@@ -33,3 +31,9 @@ s
 Csrc/main/java/com/example/bean/transformer/AbstractTransformer.java,d\e\debc690aec414c05570d4c306b9d9533517deb11
 d
 4src/main/java/com/example/config/SecurityConfig.java,f\e\fef08d8c7aa0a384a1c6c20c4e1bcf476cc11bce
+\
+,src/main/java/com/example/model/Student.java,c\5\c5c40fbf374c0fe906d3268fb0e35c4427a5030f
+\
+,src/main/java/com/example/model/Teacher.java,1\4\14f7be931877b7e67685c938a2b9b11e3887220f
+_
+/src/main/java/com/example/bean/TeacherBean.java,3\a\3a74a18bfc16b701e51704f432b8c8bcf851ff71

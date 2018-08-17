@@ -1,7 +1,7 @@
 package com.example.bean.transformer;
 
 import com.example.bean.StudentBean;
-import com.example.student.Student;
+import com.example.model.Student;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,6 +1,6 @@
 
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(Íƒ¤Èıÿÿÿÿ8¶ŠßêÓ,
 V
 squid:S106"9Replace this use of System.out or System.err by a logger.(›Œ™8¶ŠßêÓ,
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Íƒ¤Èıÿÿÿÿ8¶ŠßêÓ,
 ƒsquid:UselessImportCheck"XRemove this unused import 'springfox.documentation.swagger2.annotations.EnableSwagger2'.(ùÔ¨8çÆàêÓ,

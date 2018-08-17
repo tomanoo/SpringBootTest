@@ -1,7 +1,7 @@
 package com.example.service;
 
 import com.example.dao.StudentDao;
-import com.example.student.Student;
+import com.example.model.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
