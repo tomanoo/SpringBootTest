@@ -33,27 +33,27 @@ public class StudentController {
         return student.map(s -> transformerProvider.setStudentFromModel(s)).orElse(new StudentBean());
     }
 
-    @RequestMapping(value = "/web/model/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/web/student/{id}", method = RequestMethod.DELETE)
     public void removeStudent(@PathVariable Long id) throws Exception{
         studentService.removeStudent(id);
     }
 
-    @RequestMapping(value = "/web/model", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/student", method = RequestMethod.GET)
     public List<StudentBean> getStudentsByName(@RequestParam(name = "name") String name){
         return studentService.getStudentsByName(name).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
-    @RequestMapping(value = "/web/name-containing/{value}", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/student/name-containing/{value}", method = RequestMethod.GET)
     public List<StudentBean> getStudentsByNameContaining(@PathVariable String value){
         return studentService.getStudentsByNameContaining(value).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
-    @RequestMapping(value = "/web/model/passport_number", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/student/passport_number", method = RequestMethod.GET)
     public StudentBean getStudentByPassportNumber(@RequestParam(name = "passport_number") String passportNumber){
         return transformerProvider.setStudentFromModel(studentService.getStudentByPassportNumber(passportNumber));
     }
 
-    @RequestMapping(value = "web/passport_number-containing/{value}", method = RequestMethod.GET)
+    @RequestMapping(value = "web/student/passport_number-containing/{value}", method = RequestMethod.GET)
     public List<StudentBean> getStudentsByPassportNumberContaining(@PathVariable String value){
         return studentService.getStudentsByPassportNumberContaining(value).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
@@ -63,7 +63,7 @@ public class StudentController {
         return studentService.getAllStudents().stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
-    @RequestMapping(value = "/web/model", method = RequestMethod.POST)
+    @RequestMapping(value = "/web/student", method = RequestMethod.POST)
     public Long addStudent(@RequestParam(name="name") String name,
                            @RequestParam(name="passportNumber") String passportNumber){
         StudentBean studentBean = new StudentBean();

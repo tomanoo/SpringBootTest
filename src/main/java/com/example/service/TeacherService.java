@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class TeacherService {
@@ -36,6 +38,11 @@ public class TeacherService {
 
     public List<Teacher> getTeachersBySubjectContaining(String subject){
         return teacherDao.findBySubjectContainingIgnoreCase(subject);
+    }
+
+    public List<Teacher> getAllTeachers(){
+        Iterable<Teacher> teachers = teacherDao.findAll();
+        return StreamSupport.stream(teachers.spliterator(), false).collect(Collectors.toList());
     }
 
     public Long addTeacher(Teacher teacher){

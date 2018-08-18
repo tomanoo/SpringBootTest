@@ -5,6 +5,7 @@ public class StudentBean {
     private Long id;
     private String name;
     private String passportNumber;
+    private TeacherBean teacherBean;
 
     public StudentBean(){}
 
@@ -36,6 +37,14 @@ public class StudentBean {
 
     public void setPassportNumber(String passportNumber) {
         this.passportNumber = passportNumber;
+    }
+
+    public TeacherBean getTeacherBean() {
+        return teacherBean;
+    }
+
+    public void setTeacherBean(TeacherBean teacherBean) {
+        this.teacherBean = teacherBean;
     }
 }
 

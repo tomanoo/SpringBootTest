@@ -21,6 +21,10 @@ public class Student implements Serializable {
     @Column(name="passport_number")
     private String passportNumber;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "teacher_id")
+    private Teacher teacher;
+
     public Student() {
         super();
     }
@@ -59,6 +63,14 @@ public class Student implements Serializable {
 
     public void setPassportNumber(String passportNumber) {
         this.passportNumber = passportNumber;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     @Override
