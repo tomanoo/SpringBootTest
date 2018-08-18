@@ -1,11 +1,11 @@
 
-ksquid:S44883"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(©‹„ÿÿÿÿÿ8Ğ¿ êÓ,
-ksquid:S4488="HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¼°ïşÿÿÿÿ8Ğ¿ êÓ,
+fsquid:S4488."HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹ÿ§°8Ğ¿ êÓ,
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ø“³ÿÿÿÿÿ8Ğ¿ êÓ,
+msquid:S4488B"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¸ñôÌøÿÿÿÿ8Ğ¿ êÓ,
 dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ôòæ®øÿÿÿÿ
 ksquid:S44888"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(æ–úÙûÿÿÿÿ8†Éÿ•Ô,
-@squid:S1068"*Remove this unused "logger" private field.(ù³õr
-nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ø“³ÿÿÿÿÿ8Ğ¿ êÓ,
-ksquid:S4488)"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(±Ë¾ùûÿÿÿÿ8Ğ¿ êÓ,
 jsquid:S4488$"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(‡ÙœŸøÿÿÿÿ
-fsquid:S4488."HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹ÿ§°8Ğ¿ êÓ,
-msquid:S4488B"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¸ñôÌøÿÿÿÿ8Ğ¿ êÓ,
+ksquid:S4488)"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(±Ë¾ùûÿÿÿÿ8Ğ¿ êÓ,
+@squid:S1068"*Remove this unused "logger" private field.(ù³õr
+ksquid:S44883"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(©‹„ÿÿÿÿÿ8Ğ¿ êÓ,
+ksquid:S4488="HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¼°ïşÿÿÿÿ8Ğ¿ êÓ,
