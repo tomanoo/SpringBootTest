@@ -71,4 +71,14 @@ public class StudentController {
         studentBean.setPassportNumber(passportNumber);
         return studentService.addStudent(transformerProvider.setStudentFromBean(studentBean));
     }
+
+    @RequestMapping(value = "web/student", method = {RequestMethod.PUT, RequestMethod.PATCH})
+    public void updateStudent(@RequestParam(name = "id") Long id,
+                              @RequestParam(name = "name") String name,
+                              @RequestParam(name = "passportNumber") String passportNumber){
+        StudentBean studentBean = new StudentBean();
+        studentBean.setId(id);
+        studentBean.setName(name);
+        studentBean.setPassportNumber(passportNumber);
+        }
 }

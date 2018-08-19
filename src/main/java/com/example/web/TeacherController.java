@@ -47,6 +47,16 @@ public class TeacherController {
         return teacherService.getTeachersByNameContaining(value).stream().map(t -> transformerProvider.setTeacherFromModel(t)).collect(Collectors.toList());
     }
 
+    @RequestMapping(value = "web/teacher/subject", method = RequestMethod.GET)
+    public List<TeacherBean> getTeachersBySubject(@RequestParam(name = "subject") String subject){
+        return teacherService.getTeachersBySubject(subject).stream().map(t -> transformerProvider.setTeacherFromModel(t)).collect(Collectors.toList());
+    }
+
+    @RequestMapping(value = "web/teacher/subject-containing/{value}", method = RequestMethod.GET)
+    public List<TeacherBean> getTeachersBySubjectContaining(@PathVariable String value){
+        return teacherService.getTeachersBySubjectContaining(value).stream().map(t -> transformerProvider.setTeacherFromModel(t)).collect(Collectors.toList());
+    }
+
     @RequestMapping(value = "web/teachers", method = RequestMethod.GET)
     public List<TeacherBean> getAllTeachers(){
         return teacherService.getAllTeachers().stream().map(t -> transformerProvider.setTeacherFromModel(t)).collect(Collectors.toList());
