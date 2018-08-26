@@ -26,7 +26,7 @@ public class StudentController {
     @Autowired
     TransformerProvider transformerProvider;
 
-    @RequestMapping(value = "/web/model/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/student/{id}", method = RequestMethod.GET)
     public StudentBean getStudentById(@PathVariable Long id){
         Optional<Student> student = studentService.getStudentById(id);
         //return transformerProvider.setStudentFromModel(studentService.getStudentById(id));
