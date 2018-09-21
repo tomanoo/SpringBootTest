@@ -62,6 +62,12 @@ public class TeacherController {
         return teacherService.getAllTeachers().stream().map(t -> transformerProvider.setTeacherFromModel(t)).collect(Collectors.toList());
     }
 
+    @RequestMapping(value = "web/teacher/{id}/students", method = RequestMethod.GET)
+    public List<StudentBean> getAllStudentsFromTeacher(@PathVariable Long id){
+        //return getTeacherById(id).getStudents();
+        return teacherService.getAllStudentsFromTeacher(id).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
+    }
+
     @RequestMapping(value = "web/teacher", method = RequestMethod.POST)
     public Long addTeacher(@RequestParam(name = "name") String name,
                            @RequestParam(name = "subject") String subject){

@@ -1,7 +1,7 @@
 
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…û˜—üÿÿÿÿ8Ù¿ êÓ,
+^squid:S00112C"FDefine and throw a dedicated exception instead of using a generic one.(×þÎÄ
 Msquid:S1068"*Remove this unused "logger" private field.(Ó¬Õøÿÿÿÿ8ÞØä›Õ,
-^squid:S001128"FDefine and throw a dedicated exception instead of using a generic one.(ÞŒæ¹
-^squid:S001126"FDefine and throw a dedicated exception instead of using a generic one.(¡æÙ¡
-^squid:S00112?"FDefine and throw a dedicated exception instead of using a generic one.(×þÎÄ
-csquid:S00112="FDefine and throw a dedicated exception instead of using a generic one.(õÃøæøÿÿÿÿ
+^squid:S00112:"FDefine and throw a dedicated exception instead of using a generic one.(¡æÙ¡
+csquid:S00112A"FDefine and throw a dedicated exception instead of using a generic one.(õÃøæøÿÿÿÿ
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…û˜—üÿÿÿÿ8Ù¿ êÓ,
+^squid:S00112<"FDefine and throw a dedicated exception instead of using a generic one.(ÞŒæ¹

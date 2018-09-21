@@ -41,6 +41,10 @@ public class StudentService {
         return studentDao.findByPassportNumberContainingIgnoreCase(passportNumber);
     }
 
+    public List<Student> getStudentsByTeacherId(Long teacherId){
+        return studentDao.findByTeacherId(teacherId);
+    }
+
     public List<Student> getAllStudents(){
         Iterable<Student> students = studentDao.findAll();
         return StreamSupport.stream(students.spliterator(), false).collect(Collectors.toList());

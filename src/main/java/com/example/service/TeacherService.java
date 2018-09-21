@@ -1,6 +1,9 @@
 package com.example.service;
 
+import com.example.bean.StudentBean;
+import com.example.dao.StudentDao;
 import com.example.dao.TeacherDao;
+import com.example.model.Student;
 import com.example.model.Teacher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +22,9 @@ public class TeacherService {
 
     @Autowired
     TeacherDao teacherDao;
+
+    @Autowired
+    StudentDao studentDao;
 
     public Optional<Teacher> getTeacherById(Long id){
         return teacherDao.findById(id);
@@ -62,5 +68,9 @@ public class TeacherService {
             throw new Exception("Teacher with id: " + id + "doesn't exist!");
         }
         teacherDao.deleteById(id);
+    }
+
+    public List<Student> getAllStudentsFromTeacher(Long id){
+        return teacherDao.findAllStudentsFromTeacher(id);
     }
 }

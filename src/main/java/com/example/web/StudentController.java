@@ -58,6 +58,11 @@ public class StudentController {
         return studentService.getStudentsByPassportNumberContaining(value).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
+    @RequestMapping(value = "web/student/teacher_id/{id}", method = RequestMethod.GET)
+    public List<StudentBean> getStudentsByTeacherId(@RequestParam(name = "teacher_id") Long teacherId){
+        return studentService.getStudentsByTeacherId(teacherId).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
+    }
+
     @RequestMapping(value = "/web/students", method = RequestMethod.GET)
     public List<StudentBean> getAllStudents(){
         return studentService.getAllStudents().stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
@@ -65,20 +70,24 @@ public class StudentController {
 
     @RequestMapping(value = "/web/student", method = RequestMethod.POST)
     public Long addStudent(@RequestParam(name="name") String name,
-                           @RequestParam(name="passportNumber") String passportNumber){
+                           @RequestParam(name="passportNumber") String passportNumber,
+                           @RequestParam(name = "teacher_id") Long teacherId){
         StudentBean studentBean = new StudentBean();
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
+        studentBean.setTeacherBeanId(teacherId);
         return studentService.addStudent(transformerProvider.setStudentFromBean(studentBean));
     }
 
     @RequestMapping(value = "web/student", method = {RequestMethod.PUT, RequestMethod.PATCH})
     public void updateStudent(@RequestParam(name = "id") Long id,
                               @RequestParam(name = "name") String name,
-                              @RequestParam(name = "passportNumber") String passportNumber){
+                              @RequestParam(name = "passportNumber") String passportNumber,
+                              @RequestParam(name = "teacher_id") Long teacherId){
         StudentBean studentBean = new StudentBean();
         studentBean.setId(id);
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
+        studentBean.setTeacherBeanId(teacherId);
         }
 }

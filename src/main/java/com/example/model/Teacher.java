@@ -27,6 +27,7 @@ public class Teacher implements Serializable {
                 cascade = CascadeType.ALL,
                 orphanRemoval = true)
     private List<Student> students;
+    //private List<Long> students;
 
     public Teacher() {
         super();
@@ -78,5 +79,9 @@ public class Teacher implements Serializable {
 
     public void setStudents(List<Student> students) {
         this.students = students;
+    }
+
+    public void addStudentToTeacher(Student student){
+        students.add(student);
     }
 }

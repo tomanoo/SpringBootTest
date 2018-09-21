@@ -5,7 +5,7 @@ public class StudentBean {
     private Long id;
     private String name;
     private String passportNumber;
-    private TeacherBean teacherBean;
+    private Long teacherBeanId;
 
     public StudentBean(){}
 
@@ -13,6 +13,13 @@ public class StudentBean {
         this.id = id;
         this.name = name;
         this.passportNumber = passportNumber;
+    }
+
+    public StudentBean(Long id, String name, String passportNumber, Long teacherBeanId) {
+        this.id = id;
+        this.name = name;
+        this.passportNumber = passportNumber;
+        this.teacherBeanId = teacherBeanId;
     }
 
     public Long getId() {
@@ -39,12 +46,12 @@ public class StudentBean {
         this.passportNumber = passportNumber;
     }
 
-    public TeacherBean getTeacherBean() {
-        return teacherBean;
+    public Long getTeacherBeanId() {
+        return teacherBeanId;
     }
 
-    public void setTeacherBean(TeacherBean teacherBean) {
-        this.teacherBean = teacherBean;
+    public void setTeacherBeanId(Long teacherBeanId) {
+        this.teacherBeanId = teacherBeanId;
     }
 }
 

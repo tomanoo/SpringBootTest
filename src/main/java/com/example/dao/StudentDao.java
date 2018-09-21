@@ -11,4 +11,5 @@ public interface StudentDao extends CrudRepository<Student, Long> {
     List<Student> findByNameContainingIgnoreCase(String name);
     Student findByPassportNumberIgnoreCase(String name);
     List<Student> findByPassportNumberContainingIgnoreCase(String name);
+    List<Student> findByTeacherId (Long teacherId);
 }
