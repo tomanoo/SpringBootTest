@@ -73,7 +73,7 @@ public class StudentController {
     @RequestMapping(value = "/web/student", method = RequestMethod.POST)
     public Long addStudent(@RequestParam(name="name") String name,
                            @RequestParam(name="passportNumber") String passportNumber,
-                           @RequestParam(name = "teacher_id") Long teacherBean){
+                           @RequestParam(name = "teacher_id") TeacherBean teacherBean){
         StudentBean studentBean = new StudentBean();
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
@@ -85,7 +85,7 @@ public class StudentController {
     public void updateStudent(@RequestParam(name = "id") Long id,
                               @RequestParam(name = "name") String name,
                               @RequestParam(name = "passportNumber") String passportNumber,
-                              @RequestParam(name = "teacher_id") Long teacherBean){
+                              @RequestParam(name = "teacher_id") TeacherBean teacherBean){
         StudentBean studentBean = new StudentBean();
         studentBean.setId(id);
         studentBean.setName(name);

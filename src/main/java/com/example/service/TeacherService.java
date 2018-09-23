@@ -70,7 +70,7 @@ public class TeacherService {
         teacherDao.deleteById(id);
     }
 
-    public List<Long> getAllStudentsFromTeacher(Long id){
-        return teacherDao.findAllStudentsFromTeacher(id);
+    public List<Student> getAllStudentsFromTeacher(Long id){
+        return teacherDao.findByStudents(id);
     }
 }

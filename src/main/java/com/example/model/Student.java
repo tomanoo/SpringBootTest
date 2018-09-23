@@ -23,7 +23,7 @@ public class Student implements Serializable {
 
     @ManyToOne//(targetEntity = Student.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "teacher_id")
-    private Long teacher;
+    private Teacher teacher;
 
     public Student() {
         super();
@@ -41,7 +41,7 @@ public class Student implements Serializable {
         this.passportNumber = passportNumber;
     }
 
-    public Student(Long id, String name, String passportNumber, Long teacher) {
+    public Student(Long id, String name, String passportNumber, Teacher teacher) {
         super();
         this.id = id;
         this.name = name;
@@ -73,11 +73,11 @@ public class Student implements Serializable {
         this.passportNumber = passportNumber;
     }
 
-    public Long getTeacher() {
+    public Teacher getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(Long teacher) {
+    public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 
