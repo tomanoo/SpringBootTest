@@ -2,6 +2,7 @@ package com.example.web;
 
 import com.example.bean.StudentBean;
 import com.example.bean.TeacherBean;
+import com.example.model.Student;
 import com.example.model.Teacher;
 import com.example.service.TeacherService;
 import com.example.service.TransformerProvider;
@@ -63,9 +64,8 @@ public class TeacherController {
     }
 
     @RequestMapping(value = "web/teacher/{id}/students", method = RequestMethod.GET)
-    public List<StudentBean> getAllStudentsFromTeacher(@PathVariable Long id){
-        //return getTeacherById(id).getStudents();
-        return teacherService.getAllStudentsFromTeacher(id).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
+    public List<Long> getAllStudentsFromTeacher(@PathVariable Long id){
+        return teacherService.getAllStudentsFromTeacher(id);
     }
 
     @RequestMapping(value = "web/teacher", method = RequestMethod.POST)

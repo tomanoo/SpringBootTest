@@ -2,6 +2,8 @@ package com.example.web;
 
 
 import com.example.bean.StudentBean;
+import com.example.bean.TeacherBean;
+import com.example.model.Teacher;
 import com.example.service.StudentService;
 import com.example.service.TransformerProvider;
 import com.example.model.Student;
@@ -59,8 +61,8 @@ public class StudentController {
     }
 
     @RequestMapping(value = "web/student/teacher_id/{id}", method = RequestMethod.GET)
-    public List<StudentBean> getStudentsByTeacherId(@RequestParam(name = "teacher_id") Long teacherId){
-        return studentService.getStudentsByTeacherId(teacherId).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
+    public List<StudentBean> getStudentsByTeacher(@RequestParam(name = "teacher_id") Teacher teacher){
+        return studentService.getStudentsByTeacher(teacher).stream().map(s -> transformerProvider.setStudentFromModel(s)).collect(Collectors.toList());
     }
 
     @RequestMapping(value = "/web/students", method = RequestMethod.GET)
@@ -71,11 +73,11 @@ public class StudentController {
     @RequestMapping(value = "/web/student", method = RequestMethod.POST)
     public Long addStudent(@RequestParam(name="name") String name,
                            @RequestParam(name="passportNumber") String passportNumber,
-                           @RequestParam(name = "teacher_id") Long teacherId){
+                           @RequestParam(name = "teacher_id") Long teacherBean){
         StudentBean studentBean = new StudentBean();
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
-        studentBean.setTeacherBeanId(teacherId);
+        studentBean.setTeacherBean(teacherBean);
         return studentService.addStudent(transformerProvider.setStudentFromBean(studentBean));
     }
 
@@ -83,11 +85,11 @@ public class StudentController {
     public void updateStudent(@RequestParam(name = "id") Long id,
                               @RequestParam(name = "name") String name,
                               @RequestParam(name = "passportNumber") String passportNumber,
-                              @RequestParam(name = "teacher_id") Long teacherId){
+                              @RequestParam(name = "teacher_id") Long teacherBean){
         StudentBean studentBean = new StudentBean();
         studentBean.setId(id);
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
-        studentBean.setTeacherBeanId(teacherId);
+        studentBean.setTeacherBean(teacherBean);
         }
 }

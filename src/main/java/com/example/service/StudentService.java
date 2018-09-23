@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.dao.StudentDao;
 import com.example.model.Student;
+import com.example.model.Teacher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +42,8 @@ public class StudentService {
         return studentDao.findByPassportNumberContainingIgnoreCase(passportNumber);
     }
 
-    public List<Student> getStudentsByTeacherId(Long teacherId){
-        return studentDao.findByTeacherId(teacherId);
+    public List<Student> getStudentsByTeacher(Teacher teacher){
+        return studentDao.findByTeacher(teacher);
     }
 
     public List<Student> getAllStudents(){

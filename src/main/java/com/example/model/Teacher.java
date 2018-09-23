@@ -23,23 +23,23 @@ public class Teacher implements Serializable {
     @Column(name="subject")
     private String subject;
 
-    @OneToMany(mappedBy = "teacher",
-                cascade = CascadeType.ALL,
-                orphanRemoval = true)
-    private List<Student> students;
-    //private List<Long> students;
+    @OneToMany(mappedBy = "teacher", targetEntity = Student.class)
+                //cascade = CascadeType.ALL,
+                //orphanRemoval = true)
+    //private List<Student> students;
+    private List<Long> students;
 
     public Teacher() {
         super();
     }
 
-    public Teacher(String name, List<Student> students) {
+    public Teacher(String name, List<Long> students) {
         super();
         this.name = name;
         this.students = students;
     }
 
-    public Teacher(Long id, String name, List<Student> students) {
+    public Teacher(Long id, String name, List<Long> students) {
         super();
         this.id = id;
         this.name = name;
@@ -70,18 +70,18 @@ public class Teacher implements Serializable {
         this.subject = subject;
     }
 
-    public List<Student> getStudents() {
+    public List<Long> getStudents() {
         if (CollectionUtils.isEmpty(students)) {
             students = new ArrayList<>();
         }
         return students;
     }
 
-    public void setStudents(List<Student> students) {
+    public void setStudents(List<Long> students) {
         this.students = students;
     }
 
-    public void addStudentToTeacher(Student student){
+    public void addStudentToTeacher(Long student){
         students.add(student);
     }
 }
