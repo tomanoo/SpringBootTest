@@ -12,20 +12,20 @@ public class TeacherBean {
     private String name;
     private String subject;
     //private List<StudentBean> students;
-    private List<StudentBean> students;
+    private List<Long> students;
 
     public TeacherBean() {
         super();
     }
 
-    public TeacherBean(String name, String subject, List<StudentBean> students) {
+    public TeacherBean(String name, String subject, List<Long> students) {
         super();
         this.name = name;
         this.subject = subject;
         this.students = students;
     }
 
-    public TeacherBean(Long id, String name, String subject, List<StudentBean> students) {
+    public TeacherBean(Long id, String name, String subject, List<Long> students) {
         super();
         this.id = id;
         this.name = name;
@@ -58,18 +58,18 @@ public class TeacherBean {
     }
 
     //public List<StudentBean> getStudents() {
-    public List<StudentBean> getStudents(){
+    public List<Long> getStudents(){
         if (CollectionUtils.isEmpty(students)) {
             students = new ArrayList<>();
         }
         return students;
     }
 
-    public void setStudents(List<StudentBean> students) {//StudentBean> students) {
+    public void setStudents(List<Long> students) {//StudentBean> students) {
         this.students = students;
     }
 
-    public void addStudentToTeacher(StudentBean studentId) {//StudentBean studentBean){
+    public void addStudentToTeacher(Long studentId) {//StudentBean studentBean){
         students.add(studentId);//studentBean);
     }
 }

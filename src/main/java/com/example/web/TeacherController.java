@@ -64,7 +64,7 @@ public class TeacherController {
     }
 
     @RequestMapping(value = "web/teacher/{id}/students", method = RequestMethod.GET)
-    public List<Student> getAllStudentsFromTeacher(@PathVariable Long id){
+    public List<Long> getAllStudentsFromTeacher(@PathVariable Long id){
         return teacherService.getAllStudentsFromTeacher(id);
     }
 
