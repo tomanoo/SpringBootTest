@@ -71,6 +71,6 @@ public class TeacherService {
     }
 
     public List<Long> getAllStudentsFromTeacher(Long id){
-        return teacherDao.findByStudents(id);
+        return teacherDao.findStudentsById(id);
     }
 }

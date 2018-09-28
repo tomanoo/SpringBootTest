@@ -14,5 +14,5 @@ public interface TeacherDao extends CrudRepository<Teacher, Long> {
     List<Teacher> findBySubjectIgnoreCase(String subject);
     List<Teacher> findBySubjectContainingIgnoreCase(String subject);
     @Query(value = "SELECT Student.id FROM Student INNER JOIN Teacher ON Student.teacher_id = :tid", nativeQuery = true)
-    List<Long> findByStudents(@Param("tid") Long id);
+    List<Long> findStudentsById(@Param("tid") Long id);
 }

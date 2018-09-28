@@ -1,13 +1,13 @@
 
-esquid:S4488&"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ÎÔ¸–
-ksquid:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ªà¹ßüÿÿÿÿ8Ð¿ êÓ,
-dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÖÔ³øÿÿÿÿ
-nsquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(ø“³ÿÿÿÿÿ8Ð¿ êÓ,
-ksquid:S4488?"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(›®•Èüÿÿÿÿ8±’Î‘Þ,
-csquid:S4684@"@Replace this persistent entity with a simple POJO or DTO object.(âÒ²ßþÿÿÿÿ8§æìß,
-ksquid:S4488D"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¼°ïþÿÿÿÿ8Ð¿ êÓ,
-@squid:S1068"*Remove this unused "logger" private field.(ù³õr
-ksquid:S44885"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Äî‘Çøÿÿÿÿ8Ð¿ êÓ,
-ksquid:S4488:"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(›‰’ÿÿÿÿÿ8†Éÿ•Ô,
-fsquid:S44880"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(à›ä¢8Ð¿ êÓ,
-hsquid:S4488I"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ñÚ£’8Ð¿ êÓ,
+ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÖÔ³øÿÿÿÿ8·èëÂá,
+lsquid:S4488&"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ÎÔ¸–8·èëÂá,
+ksquid:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ªà¹ßüÿÿÿÿ8·èëÂá,
+fsquid:S44880"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(à›ä¢8·èëÂá,
+ksquid:S44885"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Äî‘Çøÿÿÿÿ8·èëÂá,
+ksquid:S4488:"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(›‰’ÿÿÿÿÿ8·èëÂá,
+ksquid:S4488?"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(›®•Èüÿÿÿÿ8·èëÂá,
+ksquid:S4488D"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¼°ïþÿÿÿÿ8·èëÂá,
+hsquid:S4488I"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ñÚ£’8·èëÂá,
+Gsquid:S1068"*Remove this unused "logger" private field.(ù³õr8·èëÂá,
+nsquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(ø“³ÿÿÿÿÿ8·èëÂá,
+csquid:S4684@"@Replace this persistent entity with a simple POJO or DTO object.(âÒ²ßþÿÿÿÿ8·èëÂá,

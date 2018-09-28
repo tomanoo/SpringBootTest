@@ -5,6 +5,7 @@ import com.example.bean.StudentBean;
 import com.example.bean.TeacherBean;
 import com.example.model.Teacher;
 import com.example.service.StudentService;
+import com.example.service.TeacherService;
 import com.example.service.TransformerProvider;
 import com.example.model.Student;
 import org.slf4j.Logger;
@@ -24,6 +25,12 @@ public class StudentController {
 
     @Autowired
     StudentService studentService;
+
+    @Autowired
+    TeacherService teacherService;
+
+    @Autowired
+    TeacherController teacherController;
 
     @Autowired
     TransformerProvider transformerProvider;
@@ -73,11 +80,12 @@ public class StudentController {
     @RequestMapping(value = "/web/student", method = RequestMethod.POST)
     public Long addStudent(@RequestParam(name="name") String name,
                            @RequestParam(name="passportNumber") String passportNumber,
-                           @RequestParam(name = "teacher_id") TeacherBean teacherBean){
+                           @RequestParam(name = "teacher_id") Long teacherBean){
         StudentBean studentBean = new StudentBean();
+        TeacherBean teacherBean1 = teacherController.getTeacherById(teacherBean);
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
-        studentBean.setTeacherBean(teacherBean);
+        studentBean.setTeacherBean(teacherBean1);
         return studentService.addStudent(transformerProvider.setStudentFromBean(studentBean));
     }
 
@@ -85,11 +93,12 @@ public class StudentController {
     public void updateStudent(@RequestParam(name = "id") Long id,
                               @RequestParam(name = "name") String name,
                               @RequestParam(name = "passportNumber") String passportNumber,
-                              @RequestParam(name = "teacher_id") TeacherBean teacherBean){
+                              @RequestParam(name = "teacher_id") Long teacherBean){
         StudentBean studentBean = new StudentBean();
+        TeacherBean teacherBean1 = teacherController.getTeacherById(teacherBean);
         studentBean.setId(id);
         studentBean.setName(name);
         studentBean.setPassportNumber(passportNumber);
-        studentBean.setTeacherBean(teacherBean);
+        studentBean.setTeacherBean(teacherBean1);
         }
 }
